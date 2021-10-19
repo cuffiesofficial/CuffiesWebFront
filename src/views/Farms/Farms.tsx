@@ -106,7 +106,7 @@ const VestAmount =useMyVest();
 
 </Container>
 
-      <Container size="lg">
+      <Container size="md">
 
       <FoundryContainer>
 
@@ -175,7 +175,7 @@ const VestAmount =useMyVest();
       </FoundryContainer>
 
 
-      </Container>
+
 
       <FoundryContainer1>
 
@@ -251,7 +251,7 @@ const VestAmount =useMyVest();
 
 </FoundryContainer1>
 
-
+</Container>
 
 
     </Page>
@@ -280,11 +280,10 @@ border-radius: 25px;
 border: solid 1px #303030;
   width:100%
   display: flex;
-  position: absolute;
+  position: relative;
   background-color: #fcdcf2;
-  bottom: -20%;
-  left: 24.3%;
-  right: 24.3%;
+  margin-bottom: 20px;
+
 
 
 
@@ -299,13 +298,12 @@ oppacity:1;
 const FoundryContainer1 = styled.div`
 border-radius: 25px;
 border: solid 1px #303030;
+position: relative;
   width:100%
   display: flex;
-  position: absolute;
+
   background-color: #fcdcf2;
-  bottom: 5%;
-  left: 24.3%;
-  right: 24.3%;
+
 
 
 

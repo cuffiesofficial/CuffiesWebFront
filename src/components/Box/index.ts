@@ -6,6 +6,7 @@ background-image:linear-gradient(-45deg,${(p) => p.theme.color.secondary}, ${(p)
   height: 100%;
   color: #fff;
   border-radius: 22px;
+  margin-bottom: 20px;
 
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 `;
