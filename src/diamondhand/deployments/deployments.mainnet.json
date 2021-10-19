@@ -1969,7 +1969,7 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_Salsa",
+            "name": "_iron",
             "type": "address"
           },
           {
@@ -2398,7 +2398,7 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_Salsa",
+            "name": "_iron",
             "type": "address"
           },
           {
@@ -2457,7 +2457,7 @@
       },
       {
         "inputs": [],
-        "name": "Salsa_",
+        "name": "iron_",
         "outputs": [
           {
             "internalType": "contract IERC20",
@@ -2755,7 +2755,7 @@
       },
       {
         "inputs": [],
-        "name": "burnSalsaPoolRatio_",
+        "name": "burnironPoolRatio_",
         "outputs": [
           {
             "internalType": "uint256",
@@ -2768,7 +2768,7 @@
       },
       {
         "inputs": [],
-        "name": "BurnSalsaPool_",
+        "name": "BurnironPool_",
         "outputs": [
           {
             "internalType": "address",
@@ -2796,7 +2796,7 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_Salsa",
+            "name": "_iron",
             "type": "address"
           },
           {
@@ -2811,7 +2811,7 @@
           },
           {
             "internalType": "address",
-            "name": "_BurnSalsaPool",
+            "name": "_BurnironPool",
             "type": "address"
           }
         ],
@@ -2822,7 +2822,7 @@
       },
       {
         "inputs": [],
-        "name": "Salsa_",
+        "name": "iron_",
         "outputs": [
           {
             "internalType": "address",
@@ -2914,7 +2914,7 @@
           },
           {
             "internalType": "uint256",
-            "name": "_BurnSalsaPoolRatio",
+            "name": "_BurnironPoolRatio",
             "type": "uint256"
           }
         ],

@@ -69,7 +69,7 @@ const YourCurrentTicketsBox: React.FC<YourCurrentTicketsBoxProps> = ({
               <span className="number">
                 <NumberDisplay value={costPerTicket} decimals={18} precision={2} />
               </span>{' '}
-              Salsa
+              iron
             </StyledPrice>
             {account ? (
               <StyledButtons>

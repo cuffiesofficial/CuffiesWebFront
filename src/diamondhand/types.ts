@@ -61,7 +61,7 @@ export type ConfigurationInfo = {
   taxRate?: BigNumber;
   maxValidRange?: number;
   powerBallRange?: number;
-  burnSalsaRatio?: BigNumber;
+  burnironRatio?: BigNumber;
   reservePoolRatio?: BigNumber;
   revervePoolBalance?: BigNumber;
   randomNumberGeneratorBalance?: BigNumber;

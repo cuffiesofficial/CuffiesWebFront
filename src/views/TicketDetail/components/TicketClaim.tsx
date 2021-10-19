@@ -57,7 +57,7 @@ const TicketClaim: React.FC<TicketClaimProps> = ({ isCloseRound, roundId }) => {
                     Jackpot:&nbsp;
                     <div className="value">
                       <NumberDisplay value={claimable?.jackpot} decimals={18} precision={2} />{' '}
-                      Salsa
+                      iron
                     </div>
                   </StyledWinTitle>
                   {filteredTickets?.jackpot?.map((item, index) => (
@@ -77,7 +77,7 @@ const TicketClaim: React.FC<TicketClaimProps> = ({ isCloseRound, roundId }) => {
                     Match four:&nbsp;
                     <div className="value">
                       <NumberDisplay value={claimable?.match4} decimals={18} precision={2} />{' '}
-                      Salsa
+                      iron
                     </div>
                   </StyledWinTitle>
                   {filteredTickets?.match4?.map((item, index) => (

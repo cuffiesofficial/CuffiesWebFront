@@ -320,12 +320,12 @@ for(let index = 0; index < numbers.length+1; index++){
                 >
                   {buttonText}
                 </ApproveButtonStyled>
-                <StyledBuySalsa>
+                <StyledBuyiron>
                   <StyledLink target="_blank" href={ExternalLinks.buyCuffies}>
                     <StyledFontAwesomeIcon icon={faShoppingCart} />
                     Buy Cuffies
                   </StyledLink>
-                </StyledBuySalsa>
+                </StyledBuyiron>
               </StyledPaymentBody>
             </StyledPaymentContent>
           </StyledWrapPayment>
@@ -625,7 +625,7 @@ const StyledBalance = styled.div`
     margin-left: 5px;
   }
 `;
-const StyledBuySalsa = styled.div`
+const StyledBuyiron = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;

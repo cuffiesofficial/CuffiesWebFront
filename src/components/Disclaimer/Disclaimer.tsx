@@ -18,9 +18,9 @@ const Disclaimer: React.FC = () => {
             <DisclaimerText>
               This software is an alpha release and pending for audit. You can lose all of your
               funds due to hacks, vulnerabilities, and economic attacks. Never use funds within
-              the Salsa finance products that you cannot afford to lose. You won’t be compensated
+              the iron finance products that you cannot afford to lose. You won’t be compensated
               for any losses. All interactions with the associated smart contracts on Binance
-              Smart Chain and software on dragonball.Salsa.finance are at your own risk.
+              Smart Chain and software on dragonball.iron.finance are at your own risk.
             </DisclaimerText>
             <DisclaimerButton className="btn" onClick={acceptTerms}>
               Accept

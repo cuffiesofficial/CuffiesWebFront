@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { BigNumber } from 'ethers';
-import ImgSalsa from 'src/assets/img/Salsa.png';
+import Imgiron from 'src/assets/img/iron.png';
 import NumberDisplay from 'src/components/Number';
 
 interface LastRoundPrizeBoxProps {
@@ -24,7 +24,7 @@ const LastRoundPrizeBox: React.FC<LastRoundPrizeBoxProps> = ({
       <StyledTotal>
         <div className="content">
           <div className="wrap-prize-title">
-            <img src={ImgSalsa} />
+            <img src={Imgiron} />
             <div className="prize-title">Total Rewards:</div>
           </div>
           <div className="prize-value">

@@ -5,7 +5,7 @@ export const usePageTitle = (title: string) => {
     document.title = title;
 
     return () => {
-      document.title = 'Salsa Finance';
+      document.title = 'iron Finance';
     };
   }, [title]);
 };

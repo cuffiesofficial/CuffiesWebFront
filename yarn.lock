@@ -2012,9 +2012,9 @@
     slash "^3.0.0"
     strip-ansi "^6.0.0"
 
-"@jest/envSalsament@^26.6.0", "@jest/envSalsament@^26.6.2":
+"@jest/environment@^26.6.0", "@jest/environment@^26.6.2":
   version "26.6.2"
-  resolved "https://registry.yarnpkg.com/@jest/envSalsament/-/envSalsament-26.6.2.tgz#ba364cc72e221e79cc8f0a99555bf5d7577cf92c"
+  resolved "https://registry.yarnpkg.com/@jest/environment/-/environment-26.6.2.tgz#ba364cc72e221e79cc8f0a99555bf5d7577cf92c"
   integrity sha512-nFy+fHl28zUrRsCeMB61VDThV1pVTtlEokBRgqPrcT1JNq4yRNIyTHfyht6PqtUvY9IsuLGTrbG8kPXjSZIZwA==
   dependencies:
     "@jest/fake-timers" "^26.6.2"
@@ -2039,7 +2039,7 @@
   resolved "https://registry.yarnpkg.com/@jest/globals/-/globals-26.6.2.tgz#5b613b78a1aa2655ae908eba638cc96a20df720a"
   integrity sha512-85Ltnm7HlB/KesBUuALwQ68YTU72w9H2xW9FjZ1eL1U3lhtefjjl5c2MiUbpXt/i6LaPRvoOFJ22yCBSfQ0JIA==
   dependencies:
-    "@jest/envSalsament" "^26.6.2"
+    "@jest/environment" "^26.6.2"
     "@jest/types" "^26.6.2"
     expect "^26.6.2"
 
@@ -3075,7 +3075,7 @@
   integrity sha512-IgUReNrycIFxkGgq8YT9HsosCkhutakWD9Q411PR0aJfxpEa/VKJeaLRtoz6DvJpztWStwhIHnAbBoOVR72a6g==
   dependencies:
     "@walletconnect/encoding" "^1.0.0"
-    "@walletconnect/envSalsament" "^1.0.0"
+    "@walletconnect/environment" "^1.0.0"
     "@walletconnect/randombytes" "^1.0.1"
     aes-js "^3.1.2"
     hash.js "^1.1.7"
@@ -3088,9 +3088,9 @@
     is-typedarray "1.0.0"
     typedarray-to-buffer "3.1.5"
 
-"@walletconnect/envSalsament@^1.0.0":
+"@walletconnect/environment@^1.0.0":
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@walletconnect/envSalsament/-/envSalsament-1.0.0.tgz#c4545869fa9c389ec88c364e1a5f8178e8ab5034"
+  resolved "https://registry.yarnpkg.com/@walletconnect/environment/-/environment-1.0.0.tgz#c4545869fa9c389ec88c364e1a5f8178e8ab5034"
   integrity sha512-4BwqyWy6KpSvkocSaV7WR3BlZfrxLbJSLkg+j7Gl6pTDE+U55lLhJvQaMuDVazXYxcjBsG09k7UlH7cGiUI5vQ==
 
 "@walletconnect/http-connection@^1.6.2":
@@ -3124,7 +3124,7 @@
   resolved "https://registry.yarnpkg.com/@walletconnect/jsonrpc-utils/-/jsonrpc-utils-1.0.0.tgz#1a2f668d606e8f0b6e7d8fdebae86001bd037a3f"
   integrity sha512-qUHbKUK6sHeHn67qtHZoLoYk5hS6x1arTPjKDRkY93/6Fx+ZmNIpdm1owX3l6aYueyegJ7mz43FpvYHUqJ8xcw==
   dependencies:
-    "@walletconnect/envSalsament" "^1.0.0"
+    "@walletconnect/environment" "^1.0.0"
     "@walletconnect/jsonrpc-types" "^1.0.0"
 
 "@walletconnect/mobile-registry@^1.4.0":
@@ -3150,7 +3150,7 @@
   integrity sha512-YJTyq69i0PtxVg7osEpKfvjTaWuAsR49QEcqGKZRKVQWMbGXBZ65fovemK/SRgtiFRv0V8PwsrlKSheqzfPNcg==
   dependencies:
     "@walletconnect/encoding" "^1.0.0"
-    "@walletconnect/envSalsament" "^1.0.0"
+    "@walletconnect/environment" "^1.0.0"
     randombytes "^2.1.0"
 
 "@walletconnect/safe-json@1.0.0":
@@ -9833,7 +9833,7 @@ jest-circus@26.6.0:
   integrity sha512-L2/Y9szN6FJPWFK8kzWXwfp+FOR7xq0cUL4lIsdbIdwz3Vh6P1nrpcqOleSzr28zOtSHQNV9Z7Tl+KkuK7t5Ng==
   dependencies:
     "@babel/traverse" "^7.1.0"
-    "@jest/envSalsament" "^26.6.0"
+    "@jest/environment" "^26.6.0"
     "@jest/test-result" "^26.6.0"
     "@jest/types" "^26.6.0"
     "@types/babel__traverse" "^7.0.4"
@@ -9886,8 +9886,8 @@ jest-config@^26.6.3:
     deepmerge "^4.2.2"
     glob "^7.1.1"
     graceful-fs "^4.2.4"
-    jest-envSalsament-jsdom "^26.6.2"
-    jest-envSalsament-node "^26.6.2"
+    jest-environment-jsdom "^26.6.2"
+    jest-environment-node "^26.6.2"
     jest-get-type "^26.3.0"
     jest-jasmine2 "^26.6.3"
     jest-regex-util "^26.0.0"
@@ -9935,12 +9935,12 @@ jest-each@^26.6.0, jest-each@^26.6.2:
     jest-util "^26.6.2"
     pretty-format "^26.6.2"
 
-jest-envSalsament-jsdom@^26.6.2:
+jest-environment-jsdom@^26.6.2:
   version "26.6.2"
-  resolved "https://registry.yarnpkg.com/jest-envSalsament-jsdom/-/jest-envSalsament-jsdom-26.6.2.tgz#78d09fe9cf019a357009b9b7e1f101d23bd1da3e"
+  resolved "https://registry.yarnpkg.com/jest-environment-jsdom/-/jest-environment-jsdom-26.6.2.tgz#78d09fe9cf019a357009b9b7e1f101d23bd1da3e"
   integrity sha512-jgPqCruTlt3Kwqg5/WVFyHIOJHsiAvhcp2qiR2QQstuG9yWox5+iHpU3ZrcBxW14T4fe5Z68jAfLRh7joCSP2Q==
   dependencies:
-    "@jest/envSalsament" "^26.6.2"
+    "@jest/environment" "^26.6.2"
     "@jest/fake-timers" "^26.6.2"
     "@jest/types" "^26.6.2"
     "@types/node" "*"
@@ -9948,12 +9948,12 @@ jest-envSalsament-jsdom@^26.6.2:
     jest-util "^26.6.2"
     jsdom "^16.4.0"
 
-jest-envSalsament-node@^26.6.2:
+jest-environment-node@^26.6.2:
   version "26.6.2"
-  resolved "https://registry.yarnpkg.com/jest-envSalsament-node/-/jest-envSalsament-node-26.6.2.tgz#824e4c7fb4944646356f11ac75b229b0035f2b0c"
+  resolved "https://registry.yarnpkg.com/jest-environment-node/-/jest-environment-node-26.6.2.tgz#824e4c7fb4944646356f11ac75b229b0035f2b0c"
   integrity sha512-zhtMio3Exty18dy8ee8eJ9kjnRyZC1N4C1Nt/VShN1apyXc8rWGtJ9lI7vqiWcyyXS4BVSEn9lxAM2D+07/Tag==
   dependencies:
-    "@jest/envSalsament" "^26.6.2"
+    "@jest/environment" "^26.6.2"
     "@jest/fake-timers" "^26.6.2"
     "@jest/types" "^26.6.2"
     "@types/node" "*"
@@ -9997,7 +9997,7 @@ jest-jasmine2@^26.6.3:
   integrity sha512-kPKUrQtc8aYwBV7CqBg5pu+tmYXlvFlSFYn18ev4gPFtrRzB15N2gW/Roew3187q2w2eHuu0MU9TJz6w0/nPEg==
   dependencies:
     "@babel/traverse" "^7.1.0"
-    "@jest/envSalsament" "^26.6.2"
+    "@jest/environment" "^26.6.2"
     "@jest/source-map" "^26.6.2"
     "@jest/test-result" "^26.6.2"
     "@jest/types" "^26.6.2"
@@ -10109,7 +10109,7 @@ jest-runner@^26.6.0, jest-runner@^26.6.3:
   integrity sha512-atgKpRHnaA2OvByG/HpGA4g6CSPS/1LK0jK3gATJAoptC1ojltpmVlYC3TYgdmGp+GLuhzpH30Gvs36szSL2JQ==
   dependencies:
     "@jest/console" "^26.6.2"
-    "@jest/envSalsament" "^26.6.2"
+    "@jest/environment" "^26.6.2"
     "@jest/test-result" "^26.6.2"
     "@jest/types" "^26.6.2"
     "@types/node" "*"
@@ -10135,7 +10135,7 @@ jest-runtime@^26.6.0, jest-runtime@^26.6.3:
   integrity sha512-lrzyR3N8sacTAMeonbqpnSka1dHNux2uk0qqDXVkMv2c/A3wYnvQ4EXuI013Y6+gSKSCxdaczvf4HF0mVXHRdw==
   dependencies:
     "@jest/console" "^26.6.2"
-    "@jest/envSalsament" "^26.6.2"
+    "@jest/environment" "^26.6.2"
     "@jest/fake-timers" "^26.6.2"
     "@jest/globals" "^26.6.2"
     "@jest/source-map" "^26.6.2"

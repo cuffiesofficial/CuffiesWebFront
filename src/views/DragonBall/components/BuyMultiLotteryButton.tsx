@@ -16,7 +16,7 @@ enum ButtonStatus {
   notInputTicket = 2,
   requireApproval = 3,
   ready = 4,
-  notEnoughSalsa = 5,
+  notEnoughiron = 5,
 }
 
 type BuyMultiLotteryProps = {
@@ -41,7 +41,7 @@ const BuyMultiLotteryButton: React.FC<BuyMultiLotteryProps> = ({
   const { account } = useWeb3React();
   const balance = useTokenBalance(diamondHand?.CUFFIES);
   const handleTransactionReceipt = useHandleTransactionReceipt();
-  const [approvalSalsaState, approveSalsa] = useApprove(
+  const [approvalironState, approveiron] = useApprove(
     diamondHand?.CUFFIES,
     config?.addresses?.Lottery,
   );
@@ -62,16 +62,16 @@ const BuyMultiLotteryButton: React.FC<BuyMultiLotteryProps> = ({
       return ButtonStatus.notInputTicket;
     }
 
-    if (approvalSalsaState !== ApprovalState.APPROVED) {
+    if (approvalironState !== ApprovalState.APPROVED) {
       return ButtonStatus.requireApproval;
     }
 
     if (balance && balance.lt(totalCost)) {
-      return ButtonStatus.notEnoughSalsa;
+      return ButtonStatus.notEnoughiron;
     }
 
     return ButtonStatus.ready;
-  }, [approvalSalsaState, account, totalCost, balance, numberTicket]);
+  }, [approvalironState, account, totalCost, balance, numberTicket]);
 
   const ranHex = (length: number) => {
     return crypto
@@ -110,7 +110,7 @@ const BuyMultiLotteryButton: React.FC<BuyMultiLotteryProps> = ({
     }
     handleTransactionReceipt(
       diamondHand?.LOTTERY.batchBuyLottoTicket(lotteryId, numberTicket, numbers),
-      `Buy ${numberTicket} Salsa Offerings`,
+      `Buy ${numberTicket} iron Offerings`,
     );
   }, [
     handleTransactionReceipt,
@@ -128,16 +128,16 @@ const BuyMultiLotteryButton: React.FC<BuyMultiLotteryProps> = ({
         tryConnect();
         break;
       case ButtonStatus.requireApproval:
-        await approveSalsa();
+        await approveiron();
         break;
-      case ButtonStatus.notEnoughSalsa:
+      case ButtonStatus.notEnoughiron:
       case ButtonStatus.notInputTicket:
         break;
       case ButtonStatus.ready:
         buy();
         break;
     }
-  }, [approveSalsa, buy, tryConnect, status]);
+  }, [approveiron, buy, tryConnect, status]);
 
   const buttonText = useMemo(() => {
     switch (status) {
@@ -150,8 +150,8 @@ const BuyMultiLotteryButton: React.FC<BuyMultiLotteryProps> = ({
       case ButtonStatus.requireApproval:
         return 'Approve';
 
-      case ButtonStatus.notEnoughSalsa:
-        return 'Not Enough Salsa';
+      case ButtonStatus.notEnoughiron:
+        return 'Not Enough iron';
 
       default:
         return 'Buy tickets';
@@ -162,7 +162,7 @@ const BuyMultiLotteryButton: React.FC<BuyMultiLotteryProps> = ({
     <StyledButtonBuy
       type="button"
       className={
-        status == ButtonStatus.notEnoughSalsa || status === ButtonStatus.notInputTicket
+        status == ButtonStatus.notEnoughiron || status === ButtonStatus.notInputTicket
           ? 'btn not-enough'
           : 'btn'
       }

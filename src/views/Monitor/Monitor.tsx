@@ -87,18 +87,18 @@ const Monitor: React.FC = () => {
   };
 
   const burnPoolRatio = useMemo(() => {
-    if (!data?.burnSalsaRatio || !data?.reservePoolRatio) {
+    if (!data?.burnironRatio || !data?.reservePoolRatio) {
       return;
     }
-    const total = data?.burnSalsaRatio.add(data?.reservePoolRatio);
-    return data?.burnSalsaRatio.mul(1e6).div(total);
+    const total = data?.burnironRatio.add(data?.reservePoolRatio);
+    return data?.burnironRatio.mul(1e6).div(total);
   }, [data]);
 
   const reservePoolRatio = useMemo(() => {
-    if (!data?.burnSalsaRatio || !data?.reservePoolRatio) {
+    if (!data?.burnironRatio || !data?.reservePoolRatio) {
       return;
     }
-    const total = data?.burnSalsaRatio.add(data?.reservePoolRatio);
+    const total = data?.burnironRatio.add(data?.reservePoolRatio);
     return data?.reservePoolRatio.mul(1e6).div(total);
   }, [data]);
 
@@ -125,7 +125,7 @@ const Monitor: React.FC = () => {
                       precision={0}
                       keepZeros={true}
                     />{' '}
-                    Salsa
+                    iron
                   </div>
                 </div>
                 <div>
@@ -142,7 +142,7 @@ const Monitor: React.FC = () => {
                   <div className="title">Prize pool:</div>
                   <div className="value">
                     <NumberDisplay value={total} decimals={18} precision={0} keepZeros={true} />{' '}
-                    Salsa
+                    iron
                   </div>
                 </div>
                 <hr />
@@ -155,7 +155,7 @@ const Monitor: React.FC = () => {
                       precision={2}
                       keepZeros={true}
                     />{' '}
-                    Salsa
+                    iron
                   </div>
                 </div>
                 <div className="item">
@@ -187,7 +187,7 @@ const Monitor: React.FC = () => {
                   </div>
                 </div>
                 <div className="item">
-                  <div className="title">Burn Salsa pool rate:</div>
+                  <div className="title">Burn iron pool rate:</div>
                   <div className="value">
                     <NumberDisplay
                       value={burnPoolRatio}

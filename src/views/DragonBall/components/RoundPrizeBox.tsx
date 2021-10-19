@@ -47,14 +47,14 @@ const RoundPrizeBox: React.FC<RoundPrizeBoxProps> = ({ total, prizes, ticketsSol
             <div className="left">Match 4</div>
             <div className="right">
               <NumberDisplay value={matchFour} decimals={18} precision={0} keepZeros={true} />
-              <span className="prize-unit">Salsa</span>
+              <span className="prize-unit">iron</span>
             </div>
           </div>
           <div className="row">
             <div className="left">Match 3</div>
             <div className="right">
               <NumberDisplay value={matchThree} decimals={18} precision={0} keepZeros={true} />
-              <span className="prize-unit">Salsa</span>
+              <span className="prize-unit">iron</span>
             </div>
           </div>
           <div className="row row-total">

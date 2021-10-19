@@ -162,7 +162,7 @@ export class DiamondHand {
       [maxValidRange],
       [powerBallRange],
       [reservePoolRatio],
-      [burnSalsaRatio],
+      [burnironRatio],
       [revervePoolBalance],
       [randomNumberGeneratorBalance],
     ] = await this.multicall([
@@ -225,7 +225,7 @@ export class DiamondHand {
       maxValidRange,
       powerBallRange,
       reservePoolRatio,
-      burnSalsaRatio,
+      burnironRatio,
       revervePoolBalance,
       randomNumberGeneratorBalance,
     } as ConfigurationInfo;

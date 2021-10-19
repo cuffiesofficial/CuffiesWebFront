@@ -19,11 +19,11 @@ const store = configureStore({
   },
   middleware: [
     ...getDefaultMiddleware({ thunk: false }),
-    save({ states: PERSISTED_KEYS, namespace: 'Salsa_finance' }),
+    save({ states: PERSISTED_KEYS, namespace: 'iron_finance' }),
   ],
   preloadedState: load({
     states: PERSISTED_KEYS,
-    namespace: 'Salsa_finance',
+    namespace: 'iron_finance',
     preloadedState: {
       application: appInitialState,
     },

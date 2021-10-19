@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SalsaLogo from '../../assets/img/tokens/Salsa.png';
+import ironLogo from '../../assets/img/tokens/iron.png';
 import STEELLogo from '../../assets/img/tokens/STEEL.png';
 import ETHLogo from '../../assets/img/tokens/ETH.png';
 import ADALogo from '../../assets/img/tokens/ADA.png';
@@ -16,7 +16,7 @@ import NoLogo from '../../assets/img/no_name.png';
 import styled from 'styled-components';
 
 const logosBySymbol: { [title: string]: string } = {
-  Salsa: SalsaLogo,
+  iron: ironLogo,
   STEEL: STEELLogo,
   ETH: ETHLogo,
   ADA: ADALogo,
