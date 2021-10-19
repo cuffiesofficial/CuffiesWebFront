@@ -3,11 +3,11 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
 
 @font-face {
-  font-family: 'MLP - Magic is Friendship';
+  font-family: 'Poppins';
   src: url('font.ttf') format('truetype');
 }
 * {
-  font-family: 'MLP - Magic is Friendship';
+  font-family: 'Poppins';
 }
 
   html {
@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: 'MLP - Magic is Friendship';
+    font-family: 'Poppins';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 1rem;
@@ -28,17 +28,17 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4,h5, h6 {
-    font-family: 'MLP - Magic is Friendship';
+    font-family: 'Poppins';
     font-weight: 600;
   }
 
   code, svg {
-    font-family: 'MLP - Magic is Friendship'
+    font-family: 'Poppins'
   }
 
   button {
     user-select: none;
-    font-family:'MLP - Magic is Friendship';
+    font-family:'Poppins';
   }
 
   .btn-group {
@@ -62,7 +62,7 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 600;
     appearance: none;
     background: #a3212a;
-    font-family: 'MLP - Magic is Friendship';
+    font-family: 'Poppins';
     color: #ffffff;
     border-radius: 10px;
     border: solid 1px #a3212a;
@@ -131,7 +131,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a.link {
-    color: ${({ theme }) => theme.color.grey[200]};
+    color: ${({ theme }) => theme.color.green[100]};
     &:hover {
       color: ${(p) => p.theme.color.green[100]};
     }

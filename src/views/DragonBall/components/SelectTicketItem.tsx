@@ -14,6 +14,7 @@ import baby3 from 'src/assets/img/baby4.png';
 import baby4 from 'src/assets/img/baby5.png';
 import baby5 from 'src/assets/img/baby6.png';
 import heart from 'src/assets/img/heart.png';
+import heartgrey from 'src/assets/img/heartgrey.png';
 
 const maxChooseNumber = 4;
 
@@ -78,10 +79,10 @@ const selectid = useCallback(() => {
 
       <NormalBallContainerStyted>
         <Baby src={imgs[index]} active={isValid}/>
-        <SelectBumberLabelStyled>Choose one Cuffies</SelectBumberLabelStyled>
+        <SelectBumberLabelStyled>Select NFT:</SelectBumberLabelStyled>
 
 
-          <Heart src= {isValid ?  heart : ImgBallNoSelected} draggable="false" onClick={selectid}/>
+          <Heart src= {isValid ?  heart : heartgrey} draggable="false" onClick={selectid}/>
 
 
       </NormalBallContainerStyted>
@@ -131,6 +132,7 @@ right :10%;
 
   border-radius: 5px;
   position: relative;
+  left: 20%;
 
 
   &:hover{
@@ -139,7 +141,7 @@ right :10%;
 `;
 
 const ContainerItem = styled.div`
-  border: solid 1px #7c7a7a;
+
   background-color: #15161c;
   border-radius: 5px;
   position: relative;
@@ -152,7 +154,7 @@ const HeaderStyled = styled.div<{ active?: boolean }>`
   position: relative;
   padding: 8px 12px;
   align-items: flex-start;
-  background-color: ${({ active }) => (active ? '#4024d5' : '#16284e')};
+  background-color: ${({ active }) => (active ? '#E80055' : '#5c0424')};
   color: #ffffff;
 `;
 const TicketNumberStyled = styled.h3`
@@ -175,7 +177,7 @@ top: 3%;
 
 const NormalBallContainerStyted = styled.div`
   padding: 15px 18px;
-  border-bottom: dashed 1px ${theme.color.grey[500]};
+
 
   background-size: cover;
   &.power {

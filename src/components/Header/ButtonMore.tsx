@@ -3,7 +3,7 @@ import { ExternalLinks } from 'src/config';
 import useOutsideClick from 'src/hooks/useClickOutside';
 import styled from 'styled-components';
 import icTwitter from '../../assets/img/setting/ic-twitter.svg';
-import icDiscord from '../../assets/img/setting/ic-discord.png';
+import icinstagram from '../../assets/img/setting/ic-instagram.png';
 import icDoc from '../../assets/img/setting/ic-doc.svg';
 import icMedium from '../../assets/img/setting/ic-medium.svg';
 import icTelegram from '../../assets/img/setting/ic-telegram.svg';
@@ -43,9 +43,9 @@ const ButtonMore: React.FC = () => {
             <img src={icTelegram} />
             Telegram
           </StyledDropdownItem>
-          <StyledDropdownItem href={ExternalLinks.discord} target="_blank">
-            <img src={icDiscord} />
-            Discord
+          <StyledDropdownItem href={ExternalLinks.instagram} target="_blank">
+            <img src={icinstagram} />
+            instagram
           </StyledDropdownItem>
           <StyledDropdownItem href={ExternalLinks.twitter} target="_blank">
             <img src={icTwitter} />
@@ -75,6 +75,7 @@ const StyledDropdown = styled.div`
 
 const StyledDropdownContent = styled.div`
   min-width: 9rem;
+  border-radius: 25px;
   background-color: ${(p) => p.theme.color.primary.main};
   border: solid 3px ${(p) => p.theme.color.primary.main};
   padding: 0.5rem;

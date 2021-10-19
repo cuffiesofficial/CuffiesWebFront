@@ -6,6 +6,7 @@ import { Box, BoxBody, BoxHeader, BoxTitle } from 'src/components/Box';
 import Container from 'src/components/Container';
 import Page from 'src/components/Page';
 import Number from 'src/components/Number';
+import HowItWorks from './HowItWorks';
 import { useConfiguration } from 'src/contexts/ConfigProvider/ConfigProvider';
 import useDiamondHand from 'src/hooks/useDiamondHand';
 import useMyVest from 'src/hooks/useMyVest';
@@ -93,8 +94,17 @@ const VestAmount =useMyVest();
 
   return (
     <Page>
+<Container size="md">
 
 
+
+<HowItWorks costPerTicket={balance}/>
+
+
+
+
+
+</Container>
 
       <Container size="lg">
 
@@ -107,7 +117,16 @@ const VestAmount =useMyVest();
 
       <Heading>
 
-          <span >Unvested Tokens</span>
+          <span >Your Unvested Token balance:</span>
+          <Vest>
+    <Number
+                value={balance}
+                decimals={dh?.CUFFIES.decimals}
+                precision={6}
+              />
+               {' '}
+              <TokenSymbol size={24} symbol={token?.symbol} />
+              </Vest>
       </Heading>
 
       <Body>
@@ -115,10 +134,11 @@ const VestAmount =useMyVest();
           <TokenExpansion>
             <TokenSymbol size={54} symbol={token?.symbol} />
             <div className="text-content">
+
               <TokenName>{token?.symbol} </TokenName>
-              <div>
-                Unvested: <span className="text-value">1.3x to Pre-sale</span>{' '}
-              </div>
+              <HeadingItem>
+          Unvested: 1.3x to Pre-sale{' '}
+        </HeadingItem>
 
             </div>
 
@@ -166,12 +186,17 @@ const VestAmount =useMyVest();
 
 <Heading>
 
-    <span >Your Vested Tokens for 60 days:</span>
+   Your Vested Tokens for 60 days:
+    <Vest>
     <Number
                 value={VestAmount}
                 decimals={dh?.WBNB.decimals}
                 precision={6}
               />
+               {' '}
+              <TokenSymbol size={24} symbol={token?.symbol} />
+              </Vest>
+
 </Heading>
 
 <Body>
@@ -180,9 +205,9 @@ const VestAmount =useMyVest();
       <TokenSymbol size={54} symbol={token?.symbol} />
       <div className="text-content">
         <TokenName>{token?.symbol} </TokenName>
-        <div>
-          Unvested: <span className="text-value">2x to Pre-sale</span>{' '}
-        </div>
+        <HeadingItem>
+          Unvested: 2x to Pre-sale{' '}
+        </HeadingItem>
 
       </div>
 
@@ -233,14 +258,20 @@ const VestAmount =useMyVest();
   );
 };
 
-const Framediv = styled.div`
-border-radius: 25px;
-position: static;
-background: #f5abf7;
-width: 10000px
-animation: fadeIn 2s;
-  margin-top: 1%;
+
+const Vest = styled.div`
+
+
   display: block;
+  position: absolute;
+
+
+
+  top: 3%;
+  margin-left: 46%;
+
+
+
 
 
 `;
@@ -250,8 +281,8 @@ border: solid 1px #303030;
   width:100%
   display: flex;
   position: absolute;
-  background-color: #5a8f35;
-  top: 38%;
+  background-color: #fcdcf2;
+  bottom: -20%;
   left: 24.3%;
   right: 24.3%;
 
@@ -262,14 +293,17 @@ border: solid 1px #303030;
     }
 
 `;
+const Text = styled.div`
+oppacity:1;
+`;
 const FoundryContainer1 = styled.div`
 border-radius: 25px;
 border: solid 1px #303030;
   width:100%
   display: flex;
   position: absolute;
-  background-color: #5a8f35;
-  top: 70%;
+  background-color: #fcdcf2;
+  bottom: 5%;
   left: 24.3%;
   right: 24.3%;
 
@@ -423,7 +457,7 @@ const Logo = styled.img`
 const Heading = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 15px;
+  grid-gap: 10px;
   border-top-right-radius: 22px;
   border-top-left-radius: 22px;
   border: solid 1px #303030;
@@ -434,18 +468,18 @@ const Heading = styled.div`
 
   padding: 10px;
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 
 const HeadingItem = styled.div`
   font-size: 14px;
   font-weight:500;
-  color: color: ${(p) => p.theme.color.orange[450]};
+  color:  ${(p) => p.theme.color.white};
   .value {
     margin-left: 10px;
     font-weight: bold;
-    color: ${({ theme }) => theme.color.secondary};
+    color: ${({ theme }) => theme.color.white};
   }
 `;
 
@@ -474,7 +508,33 @@ const Body = styled.div`
     color: ${({ theme }) => theme.color.red[600]};
   }
 `;
+const Body1 = styled.div`
+  display: flex;
 
+  flex-direction: column;
+  border-radius: 25px;
+
+  padding: 10px 10px;
+
+  background-image: linear-gradient(1800deg,rgba(232,0,85,0.3) , rgba(252,220,242,0.3));
+  .content {
+    color: ${(p) => p.theme.color.secondary};
+    display: flex;
+    @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  span {
+    font-size: 13px;
+    text-align: center;
+    color: ${({ theme }) => theme.color.red[750]};
+  }
+  span.foot-note {
+    margin-top: 5px;
+    color: ${({ theme }) => theme.color.red[600]};
+  }
+`;
 const TokenExpansion = styled.div`
   display: flex;
   width: 36%;
@@ -501,12 +561,12 @@ const TokenExpansion = styled.div`
     margin-left: 10px;
     font-weight: 500;
     font-size: 14px;
-    color: #5a8f35;
+    color: #fcdcf2;
   }
 `;
 
 const TokenName = styled.div`
-  color: ${(p) => p.theme.color.orange[450]};
+  color: ${(p) => p.theme.color.orange[100]};
   font-weight: 600;
   font-size: 24px;
 `;
@@ -637,7 +697,7 @@ const InlineButton = styled.button<{ color: 'success' | 'primary' | 'danger' | '
   color: ${(p) => getColor(p.theme, p.color)};
   display: inline-block;
   cursor: pointer;
-  font-family: 'MLP - Magic is Friendship';
+  font-family: 'Poppins';
   text-decoration: underline;
   &:disabled {
     cursor: not-allowed;

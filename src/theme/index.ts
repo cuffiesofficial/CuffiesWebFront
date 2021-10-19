@@ -12,7 +12,7 @@ const theme = {
     primary: {
       one: pink[100],
       light: pink[200],
-      main: pink[300],
+      main: pink[100],
     },
     secondary: pink[200],
     white,

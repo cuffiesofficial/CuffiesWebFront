@@ -27,7 +27,8 @@ export const ModalHeader = styled.div<{ center?: boolean }>`
   display: flex;
   align-items: center;
   justify-content: ${({ center }) => (center ? 'center' : 'flex-start')};
-  background-color: #5a8f35;
+  background-color: #E80055
+  ;
   padding: 16px 22px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -45,7 +46,7 @@ export const ModalBodyNoPadding = styled.div`
 export const ModalTitle = styled.div`
   font-size: 20px;
   font-family: ${(props) => props.theme.font.heading};
-  color: #5a8f35;
+  color: #fcdcf2;
   text-transform: uppercase;
   font-weight: 700;
 `;

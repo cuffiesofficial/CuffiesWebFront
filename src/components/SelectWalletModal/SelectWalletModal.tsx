@@ -13,7 +13,7 @@ import { useAddPopup, useSetConnectedAccount } from 'src/state/application/hooks
 import useWalletConnectors from '../../hooks/useWalletConnectors';
 import { ConnectorNames } from 'src/state/application/reducer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { InjectedConnector } from '@web3-react/injected-connector';
 import { useConfiguration } from 'src/contexts/ConfigProvider/ConfigProvider';
 
@@ -123,7 +123,7 @@ const SelectWalletModal: React.FC<SelectWalletModalProps> = ({ onDismiss }) => {
       <ModalHeader>
         <ModalTitle>Connect to a Wallet</ModalTitle>
         <ModalCloseButton onClick={onDismiss}>
-          <FontAwesomeIcon icon={faCoffee} />
+          <FontAwesomeIcon icon={faTimes} />
         </ModalCloseButton>
       </ModalHeader>
       <ModalBody>

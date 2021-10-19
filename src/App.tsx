@@ -37,7 +37,7 @@ const App: React.FC = () => {
             </StyledHeaderContainer>
             <Switch>
               <Route path="/" exact>
-                <DragonBall />
+              <Farms />
               </Route>
 
               <Route path="/buy" exact>

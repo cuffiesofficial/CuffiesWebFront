@@ -147,7 +147,7 @@ const StyledTokenInput = styled.input<{ hasError?: boolean }>`
 const StyledButtonMax = styled.button`
   appearance: none;
   border: solid 2px ${(props) => props.theme.color.primary.main};
-  background-color: #5a8f35;
+  background-color: #fcdcf2;
   color: ${(props) => props.theme.color.primary.light};
   font-size: 0.85rem;
   padding: 3px 8px;

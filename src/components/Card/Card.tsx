@@ -46,7 +46,8 @@ const StyledCard = styled(FadeAnimated)<StyledCardProps>`
   position: relative;
   min-width: 300px;
   width: ${({ width }) => (width ? width : 'auto')};
-  background-color: #5a8f35;
+
+  background-image: linear-gradient(1800deg, #E80055, #fcdcf2);
   padding: ${({ padding }) => padding || '1rem'};
   z-index: 1;
   border: none;

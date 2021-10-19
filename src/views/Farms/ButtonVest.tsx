@@ -107,7 +107,7 @@ const StyledButtonAction = styled(ButtonAction)`
   display: inline-block;
   width: initial;
   text-color: #f4b5d2;
-  background-color: #5a8f35;
+  background-color: #fcdcf2;
   :hover {
     background-color:#a1118b;
   }

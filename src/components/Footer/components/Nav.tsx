@@ -14,8 +14,8 @@ const Nav: React.FC = () => {
       <StyledLink target="_blank" href={ExternalLinks.telegram}>
         Telegram
       </StyledLink>
-      <StyledLink target="_blank" href={ExternalLinks.discord}>
-        Discord
+      <StyledLink target="_blank" href={ExternalLinks.instagram}>
+        instagram
       </StyledLink>
       <StyledLink target="_blank" href={ExternalLinks.medium}>
         Medium

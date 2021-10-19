@@ -52,7 +52,7 @@ const BuyTickets: React.FC = () => {
   const { tryConnect } = useTryConnect();
   const { account } = useWeb3React();
   const handleTransactionReceipt = useHandleTransactionReceipt();
-  const { info, maxValidRange, powerBallRange } = useCurrentLotto();
+  const { info } = useCurrentLotto();
   const [tickets, setTickets] = useState<TicketItemProp[]>([EmptyTicket]);
   const [token, setToken] = useState<ERC20 | undefined>();
   const balance = useTokenBalance(token);
@@ -75,16 +75,9 @@ const BuyTickets: React.FC = () => {
     return tickets.filter((t) => t.id < 6);
   }, [tickets]);
 
-  const totalCost = useMemo(() => {
-    if (!info?.costPerTicket || !token) {
-      return BigNumber.from(0);
-    }
-    return info.costPerTicket
-      .mul(validTickets?.length || 0)
-      .mul(BigNumber.from(1e6))
-      .div(10 ** (18 - (token?.decimals || 18)))
-      .div(1e6);
-  }, [info?.costPerTicket, token, validTickets?.length]);
+  const totalCost = BigNumber.from(2000).mul(validTickets?.length || 0);
+
+
 
   const status = useMemo(() => {
     if (!account) {
@@ -121,7 +114,7 @@ const BuyTickets: React.FC = () => {
         return `Not Enough ${token?.symbol}`;
 
       default:
-        return 'Buy Baby NFT';
+        return 'Buy NFT';
     }
   }, [status, token]);
 
@@ -223,7 +216,7 @@ for(let index = 0; index < numbers.length+1; index++){
             <BuyTicketImagetyled>
               <img src={TicketImg} />
             </BuyTicketImagetyled>
-            <BuyTicketLabeltyled>Buy Cuffies NFT</BuyTicketLabeltyled>
+            <BuyTicketLabeltyled>Buy NFT</BuyTicketLabeltyled>
           </BuyTicketHeaderStyled>
           <StyledHeaderRight>
             <StyledRole>Buy up to {LIMIT_TICKET} NFT's</StyledRole>
@@ -234,7 +227,7 @@ for(let index = 0; index < numbers.length+1; index++){
         <StyledWrapBody>
           <StyledBody>
             <NumberTicketHeaderStyled>
-              <StyledLabel>Babies:</StyledLabel>
+              <StyledLabel>NFTs:</StyledLabel>
             </NumberTicketHeaderStyled>
             <TicketContainerStyled>
               {tickets.map((ticket, index) => {
@@ -294,7 +287,7 @@ for(let index = 0; index < numbers.length+1; index++){
                   </BignumberStyled>
                 </StyledFlex>
                 <StyledFlex>
-                  <label>Number of tickets</label>
+                  <label>Number of NFT's</label>
                   <BignumberStyled>{validTickets?.length}</BignumberStyled>
                 </StyledFlex>
                 <StyledFlex className="total">
@@ -336,9 +329,9 @@ for(let index = 0; index < numbers.length+1; index++){
 };
 
 const StyledPaymentContent = styled.div`
-  background-color: #c6f7b2;
+  background-color: #E80055;
   border-radius: 25px;
-  border: solid 10px #5a8f35;
+  border: solid 10px #5c0424;
   padding: 20px;
 `;
 
@@ -361,7 +354,7 @@ const StyledFlex = styled.div`
   margin-bottom: 12px;
   font-size: 14px;
   label {
-    color: '#6e4242';
+    color: '#5c0424';
   }
   &.total {
     label {
@@ -484,17 +477,19 @@ font-size: 1rem;
   text-align: center;
   width: 200px;
   height: 50px;
+  border-color: #5c0424;
   border-radius: 5px;
   margin-left: auto;
   margin-right: auto;
+  border-style: none;
 
 
   position: relative;
   overflow: hidden;
 
-  background-image: linear-gradient(270deg, ${theme.color.secondary}, ${theme.color.primary.light});
+  background-image: linear-gradient(180deg, #a1003a, #5c0424);
   background-size: 400% 400%;
-  animation: ${TransitioningBackground} 10s ease infinite;
+  animation: ${TransitioningBackground} 3s ease infinite;
   // to ease the button growth on hover
   transition: 0.6s;
 
@@ -526,7 +521,7 @@ font-size: 1rem;
 
 
   &:hover {
-    background-image: linear-gradient(to left, #2d8fe5, #d155b8);
+    background-image: linear-gradient(to left, #5c0424, #a1003a});
     transform: scale(1.05);
     cursor: pointer;
 
@@ -598,7 +593,7 @@ const AddNewTicketButtonHeader = styled.div`
   display: flex;
   align-items: center;
   padding: 5px 10px;
-  font-family:'MLP - Magic is Friendship';
+  font-family:'Poppins';
   background-color: transparent;
   text-transform: uppercase;
   color:${theme.color.primary.light};

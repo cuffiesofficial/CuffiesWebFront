@@ -27,7 +27,7 @@ const configurations: { [env: string]: Configuration } = {
       MasterChef: deploymentMainnet.MasterChef.address,
       EarlySale: deploymentMainnet.EarlySale.address,
       Nft: deploymentMainnet.Nft.address,
-      Cuffies: '0x2dA59E679529d3c04DAD1DfF038cabdB5Dcd8560',
+      Cuffies: '0xe166380ecfff545b46c64dc2faf253d00b2eea55',
       Wbnb: '0xEF1d37AAD657c5eD972836D5ACBCD86893B3D584',
       Link: '0xb0897686c545045aFc77CF20eC7A532E3120E0F1',
       Multicall: '0x08411ADd0b5AA8ee47563b146743C13b3556c9Cc',
@@ -43,19 +43,19 @@ const configurations: { [env: string]: Configuration } = {
 
     ],
     collateralTokens: {
-      Cuffies: ['0x2dA59E679529d3c04DAD1DfF038cabdB5Dcd8560', 18],
+      Cuffies: ['0xe166380ecfff545b46c64dc2faf253d00b2eea55', 18],
     },
   },
 };
 
 export const ExternalLinks = {
-  twitter: 'https://twitter.com/Cuffies',
-  codes: 'https://github.com/Cuffies',
-  discord: 'https://discord.gg/Cuffies',
+  twitter: 'https://twitter.com/cuffiesofficial',
+  codes: 'https://github.com/cuffiesofficial/',
+  instagram: 'https://www.instagram.com/cuffiesofficial/',
   medium: 'https://medium.com/@Cuffies',
-  telegram: 'https://t.me/Cuffies',
-  buyCuffies:
-    'https://app.sushi.com/swap?outputCurrency=0x2dA59E679529d3c04DAD1DfF038cabdB5Dcd8560',
+  telegram: 'https://t.me/cuffiesofficial',
+  convertWBNB: 'https://pancakeswap.finance/swap#/swap?outputCurrency=0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c',
+  buyCuffies: 'https://app.sushi.com/swap?outputCurrency=0x2dA59E679529d3c04DAD1DfF038cabdB5Dcd8560',
   rules: 'https://docs.Cuffies.finance/products/',
 };
 
