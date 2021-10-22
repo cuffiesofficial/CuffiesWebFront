@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState,MouseEvent} from 'react';
+import React, { useEffect,useCallback, useMemo, useState,MouseEvent} from 'react';
 import styled ,{ keyframes, DefaultTheme } from 'styled-components';
 import { darken } from 'polished';
 import TokenSymbol from 'src/components/TokenSymbol';
@@ -24,6 +24,7 @@ import { BigNumber } from 'ethers';
 import Spacer from 'src/components/Spacer';
 import { ButtonHarvest } from './ButtonHarvest';
 import { formatSecs } from 'src/utils/formatTime';
+import useApprove, { ApprovalState } from 'src/hooks/useApprove';
 
 
 import ponytalk from 'src/assets/img/ponytalk.png';
@@ -34,6 +35,16 @@ interface ContractLink {
   name: string;
   address: string;
 }
+enum ButtonStatus {
+  notConnected = 1,
+  insufficient = 2,
+  requireApproval = 3,
+  approvalPending = 4,
+  paused = 15,
+  ready = 20,
+  notEnough = 21,
+}
+
 
 const Farms: React.FC = () => {
   const dh = useDiamondHand();
@@ -53,12 +64,19 @@ const VestAmount =useMyVest();
 
 
   const { deployments } = config;
+  const buyAddress = useMemo(() => {
+    if (!config) {
+      return;
+    }
+    return config?.addresses?.EarlySale;
+  }, [config]);
 
   useEffect(() => {
     if (!dh || token) return;
     setToken(dh.CUFFIES);
   }, [dh, token]);
 
+  const [approvalTokenState, approveToken] = useApprove(token, buyAddress);
 
   const balance = useTokenBalance(token);
 
@@ -90,6 +108,58 @@ const VestAmount =useMyVest();
     setmouse1(!mouse1);
 
   };
+
+  const status = useMemo(() => {
+
+
+    if (approvalTokenState == ApprovalState.PENDING) {
+      return ButtonStatus.approvalPending;
+    }
+
+    if (approvalTokenState !== ApprovalState.APPROVED) {
+      return ButtonStatus.requireApproval;
+    }
+
+    return ButtonStatus.ready;
+  }, [approvalTokenState, balance]);
+
+  const buttonText = useMemo(() => {
+    switch (status) {
+      case ButtonStatus.approvalPending:
+        return `Approving ${token?.symbol}...`;
+
+      case ButtonStatus.requireApproval:
+        return 'Approve';
+      default:
+        return 'Buy';
+    }
+  }, [status, token]);
+
+   const onClickBuy = useCallback(async () => {
+    switch (status) {
+      case ButtonStatus.requireApproval:
+        await approveToken();
+        break;
+      case ButtonStatus.approvalPending:
+        break;
+      case ButtonStatus.ready:
+        showStake();
+        break;
+    }
+  }, [status,  approveToken, showStake]);
+
+  const onClickVest = useCallback(async () => {
+    switch (status) {
+      case ButtonStatus.requireApproval:
+        await approveToken();
+        break;
+      case ButtonStatus.approvalPending:
+        break;
+      case ButtonStatus.ready:
+        showVest();
+        break;
+    }
+  }, [status,  approveToken, showVest]);
 
 
   return (
@@ -151,8 +221,8 @@ const VestAmount =useMyVest();
               <div>
                 {dh?.myAccount ? (
                   <>
-                    <StakeButtonStyled onClick={showStake}>
-                      Buy Cuffies
+                    <StakeButtonStyled onClick= {onClickBuy}>
+                    {buttonText}
                     </StakeButtonStyled>
 
 
@@ -221,8 +291,8 @@ const VestAmount =useMyVest();
         <div>
           {dh?.myAccount ? (
             <>
-              <StakeButtonStyled onClick={showVest}>
-                Buy Vested
+              <StakeButtonStyled onClick={onClickVest}>
+               {  buttonText}
               </StakeButtonStyled>
 
               <InlineButton color="secondary">
