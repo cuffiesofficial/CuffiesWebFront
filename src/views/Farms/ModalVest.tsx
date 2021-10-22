@@ -26,7 +26,7 @@ export const ModalVest: React.FC<ModalStakeProps> = ({ onDismiss, token }) => {
   const [stakeAmount, setStakeAmount] = useState<BigNumber>(BigNumber.from(0));
   const BnbBalance = useTokenBalance(diamondHand?.BUSD);
   const shareBalance = useTokenBalance(diamondHand?.CUFFIES);
-  const price=BigNumber.from(108);
+  const price=BigNumber.from(166);
   let cuffieAmount= stakeAmount.mul(price);
   console.log(cuffieAmount);
 
