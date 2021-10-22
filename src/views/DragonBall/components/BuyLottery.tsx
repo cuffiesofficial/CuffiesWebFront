@@ -593,7 +593,7 @@ const AddNewTicketButtonHeader = styled.div`
   display: flex;
   align-items: center;
   padding: 5px 10px;
-  font-family:'Poppins';
+  font-family:'Dosis';
   background-color: transparent;
   text-transform: uppercase;
   color:${theme.color.primary.light};

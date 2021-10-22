@@ -5,7 +5,7 @@ import { Overrides } from '@ethersproject/contracts';
 import { JsonRpcProvider, Provider } from '@ethersproject/providers';
 import { Lottery } from './Lottery';
 import Cuffies from './Cuffies';
-import WBNB from './wbnb';
+import BUSD from './busd';
 import { Ticket } from './Ticket';
 import { MasterChef } from './MasterChef';
 import { EarlySale } from './EarlySale';
@@ -29,7 +29,7 @@ export class DiamondHand {
   private cuffies: Cuffies;
   private collateralTokens: ERC20[];
   private link: LINK;
-  private wbnb: WBNB;
+  private busd: BUSD;
   private nft: Nft;
   private ticket: Ticket;
   private masterchef: MasterChef;
@@ -52,7 +52,7 @@ export class DiamondHand {
     this.multicallAddress = cfg.addresses.Multicall;
     this.cuffies = new Cuffies(abis.Cuffies, addresses.Cuffies, provider, 'Cuffies');
     this.link = new LINK(abis.Link, addresses.Link, provider, 'LINK');
-    this.wbnb = new WBNB(abis.Wbnb, addresses.Wbnb, provider, 'WBNB');
+    this.busd = new BUSD(abis.Busd, addresses.Busd, provider, 'BUSD');
     this.collateralTokens = [];
     for (const [symbol, [address, decimal]] of Object.entries(collateralTokens)) {
       this.collateralTokens.push(new ERC20(address, provider, symbol, decimal));
@@ -136,8 +136,8 @@ export class DiamondHand {
   get LINK() {
     return this.link;
   }
-  get WBNB() {
-    return this.wbnb;
+  get BUSD() {
+    return this.busd;
   }
   get MASTERCHEF() {
     return this.masterchef;

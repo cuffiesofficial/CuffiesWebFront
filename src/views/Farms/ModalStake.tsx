@@ -24,9 +24,9 @@ export type ModalStakeProps = ModalProps & {
 export const ModalStake: React.FC<ModalStakeProps> = ({ onDismiss, token }) => {
   const diamondHand = useDiamondHand();
   const [stakeAmount, setStakeAmount] = useState<BigNumber>(BigNumber.from(0));
-  const BnbBalance = useTokenBalance(diamondHand?.WBNB);
+  const BnbBalance = useTokenBalance(diamondHand?.BUSD);
   const shareBalance = useTokenBalance(diamondHand?.CUFFIES);
-  const price=BigNumber.from(42000);
+  const price=BigNumber.from(108);
   let cuffieAmount= stakeAmount.mul(price);
   console.log(cuffieAmount);
 
@@ -47,17 +47,17 @@ export const ModalStake: React.FC<ModalStakeProps> = ({ onDismiss, token }) => {
             {BnbBalance && (
               <Number
                 value={BnbBalance}
-                decimals={diamondHand?.WBNB.decimals}
+                decimals={diamondHand?.BUSD.decimals}
                 precision={6}
               />
             )}{' '}
-            {diamondHand?.WBNB.symbol}
+            {diamondHand?.BUSD.symbol}
           </strong>{' '}
           &nbsp;available
         </FormRowLeftTitle>
         <FormRowLeftTitle>
 
-          1 WBNB = 42000{' '}{diamondHand?.CUFFIES.symbol}
+          1 Busd = 108{' '}{diamondHand?.CUFFIES.symbol}
           </FormRowLeftTitle>
 
 
@@ -65,7 +65,7 @@ export const ModalStake: React.FC<ModalStakeProps> = ({ onDismiss, token }) => {
           <div className="row-input">
             <TokenInput
               hasError={false}
-              token={diamondHand?.WBNB}
+              token={diamondHand?.BUSD}
               decimals={18}
               precision={6}
               onChange={updateShareAmount}
@@ -76,7 +76,7 @@ export const ModalStake: React.FC<ModalStakeProps> = ({ onDismiss, token }) => {
   You Receive: {' '}
             <Number
                 value={cuffieAmount}
-                decimals={diamondHand?.WBNB.decimals}
+                decimals={diamondHand?.BUSD.decimals}
                 precision={6}
               />
               {' '}
@@ -97,7 +97,7 @@ export const ModalStake: React.FC<ModalStakeProps> = ({ onDismiss, token }) => {
 
 
           <strong>
-Enter the amount of BNB you wish to invest
+Enter the amount of BUSD you wish to invest
           </strong>{' '}
 
         <div className="group-button">

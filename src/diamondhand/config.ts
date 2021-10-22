@@ -21,7 +21,7 @@ export type Configuration = {
     Nft?: any[];
     Cuffies?: any[];
     Link?: any[];
-    Wbnb?: any[];
+    Busd?: any[];
     MasterChef?: any[];
     EarlySale?: any[];
     TaxService?: any[];
@@ -31,7 +31,7 @@ export type Configuration = {
     Ticket?: string;
     Cuffies?: string;
     Link?: string;
-    Wbnb?: string;
+    Busd?: string;
     Nft?: string;
     MasterChef?: string;
     EarlySale?: string;

@@ -30,7 +30,7 @@ export const BoxHeader = styled.div<{ bg?: string }>`
 `;
 
 export const BoxTitle = styled.div`
-  font-family: 'Poppins';
+  font-family: 'Dosis';
   font-size: 16px;
   font-weight: 700;
 `;

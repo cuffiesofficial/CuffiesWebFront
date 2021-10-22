@@ -68,6 +68,7 @@ const StyledDropdown = styled.div`
   border: none;
   text-align: left;
 
+
   @media (max-width: 768px) {
     display: none;
   }

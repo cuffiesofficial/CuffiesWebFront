@@ -190,7 +190,7 @@ const VestAmount =useMyVest();
     <Vest>
     <Number
                 value={VestAmount}
-                decimals={dh?.WBNB.decimals}
+                decimals={dh?.BUSD.decimals}
                 precision={6}
               />
                {' '}
@@ -206,7 +206,7 @@ const VestAmount =useMyVest();
       <div className="text-content">
         <TokenName>{token?.symbol} </TokenName>
         <HeadingItem>
-          Unvested: 2x to Pre-sale{' '}
+          Vested: 2x to Pre-sale{' '}
         </HeadingItem>
 
       </div>
@@ -695,7 +695,7 @@ const InlineButton = styled.button<{ color: 'success' | 'primary' | 'danger' | '
   color: ${(p) => getColor(p.theme, p.color)};
   display: inline-block;
   cursor: pointer;
-  font-family: 'Poppins';
+  font-family: 'Dosis';
   text-decoration: underline;
   &:disabled {
     cursor: not-allowed;

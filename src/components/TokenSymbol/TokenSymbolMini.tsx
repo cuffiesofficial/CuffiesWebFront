@@ -6,7 +6,7 @@ import ETHLogo from '../../assets/img/tokens/ETH.png';
 import ADALogo from '../../assets/img/tokens/ADA.png';
 import DOTLogo from '../../assets/img/tokens/DOT.png';
 import BNBLogo from 'src/assets/img/tokens/BNB.png';
-import WBNBLogo from 'src/assets/img/tokens/WBNB.png';
+import BUSDLogo from 'src/assets/img/tokens/BUSD.png';
 import DIAMONDLogo from '../../assets/img/tokens/Diamond.png';
 import BTCBLogo from '../../assets/img/tokens/BTCB.png';
 import dBNBLogo from 'src/assets/img/tokens/DBNB.png';
@@ -22,7 +22,7 @@ const logosBySymbol: { [title: string]: string } = {
   ADA: ADALogo,
   DOT: DOTLogo,
   BNB: BNBLogo,
-  WBNB: WBNBLogo,
+  BUSD: BUSDLogo,
   BTCB: BTCBLogo,
   dBNB: dBNBLogo,
   dBTC: dBTCLogo,

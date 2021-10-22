@@ -3,11 +3,11 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('font.ttf') format('truetype');
+  font-family: 'Dosis';
+  src: url('font2.ttf') format('truetype');
 }
 * {
-  font-family: 'Poppins';
+  font-family: 'Dosis';
 }
 
   html {
@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: 'Poppins';
+    font-family: 'Dosis';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 1rem;
@@ -28,17 +28,17 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4,h5, h6 {
-    font-family: 'Poppins';
+    font-family: 'Dosis';
     font-weight: 600;
   }
 
   code, svg {
-    font-family: 'Poppins'
+    font-family: 'Dosis'
   }
 
   button {
     user-select: none;
-    font-family:'Poppins';
+    font-family:'Dosis';
   }
 
   .btn-group {
@@ -62,7 +62,7 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 600;
     appearance: none;
     background: #a3212a;
-    font-family: 'Poppins';
+    font-family: 'Dosis';
     color: #ffffff;
     border-radius: 10px;
     border: solid 1px #a3212a;

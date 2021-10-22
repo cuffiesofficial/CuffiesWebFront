@@ -45,18 +45,18 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ costPerTicket }) => {
             <StyledOrder>1</StyledOrder>
             <StyledContent>
 
-              Wrap your BNB by converting {' '}
-              <a href={ExternalLinks.convertWBNB} target="_blank">
-              BNB to WBNB
+              Get your{' '}
+              <a href={ExternalLinks.convertBUSD} target="_blank">
+              Busd
               </a>{' '}
+              in your Wallet{' '}
 
             </StyledContent>
           </StyledItem>
           <StyledItem>
             <StyledOrder>2</StyledOrder>
             <StyledContent>
-              Choose one of our plans and get your hands on the lowest available price possible of our token!
-
+              Decide on your preferred way to invest at $CUFFIES
 
 
 
@@ -65,7 +65,7 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ costPerTicket }) => {
           <StyledItem>
             <StyledOrder lastOrder>3</StyledOrder>
             <StyledContent>
-             Enjoy!
+             Stay tuned with news around the project. Any question, let us know.
                 <TokenSymbol size={24} symbol={token?.symbol} />{' '}
              {' '}
 

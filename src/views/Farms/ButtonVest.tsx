@@ -33,7 +33,7 @@ const balance = useTokenBalance(token);
 
 useEffect(() => {
   if (!dh || token) return;
-  setToken(dh.WBNB);
+  setToken(dh.BUSD);
 }, [dh, token]);
 
 const buyAddress = useMemo(() => {
