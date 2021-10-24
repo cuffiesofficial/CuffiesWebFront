@@ -27,7 +27,7 @@ const configurations: { [env: string]: Configuration } = {
       MasterChef: deploymentMainnet.MasterChef.address,
       EarlySale: deploymentMainnet.EarlySale.address,
       Nft: deploymentMainnet.Nft.address,
-      Cuffies: '0x76411C6619885bb8432E5530BC445b24AB9B5237',
+      Cuffies: '0xa5B73705345dF89e711C0f5866868Dcdd5669C09',
       Busd: '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
       Link: '0xb0897686c545045aFc77CF20eC7A532E3120E0F1',
       Multicall: '0x41263cba59eb80dc200f3e2544eda4ed6a90e76c',
@@ -39,11 +39,11 @@ const configurations: { [env: string]: Configuration } = {
 
 
     admins: [
-      '0x1A8C1fe6984ceCB6ebd16Ae31cD392c9463061Fa'
+      '0x35f4c151B3F7390C11dcf0A9a544B95C00093AB4'
 
     ],
     collateralTokens: {
-      Cuffies: ['0x76411C6619885bb8432E5530BC445b24AB9B5237', 18],
+      Cuffies: ['0xa5B73705345dF89e711C0f5866868Dcdd5669C09', 18],
     },
   },
 };
