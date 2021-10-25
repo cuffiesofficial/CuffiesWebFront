@@ -27,7 +27,7 @@ const configurations: { [env: string]: Configuration } = {
       MasterChef: deploymentMainnet.MasterChef.address,
       EarlySale: deploymentMainnet.EarlySale.address,
       Nft: deploymentMainnet.Nft.address,
-      Cuffies: '0xa5B73705345dF89e711C0f5866868Dcdd5669C09',
+      Cuffies: '0xBA2467C21a2A01AadB81029Df9Df02Dc48D14Be9',
       Busd: '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
       Link: '0xb0897686c545045aFc77CF20eC7A532E3120E0F1',
       Multicall: '0x41263cba59eb80dc200f3e2544eda4ed6a90e76c',
